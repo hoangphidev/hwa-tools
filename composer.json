@@ -1,0 +1,76 @@
+{
+    "name": "hoangphi/hwa-tools",
+    "type": "library",
+    "description": "A package about helper function and meta tools. Development by Phi Hoang",
+    "license": "MIT",
+    "keywords": [
+        "hoangphidev",
+        "hwa-vina",
+        "metatools",
+        "meta-tools",
+        "package",
+        "laravel",
+        "laravel-metatools",
+        "laravel-meta-tools",
+        "laravel-package",
+        "laravel-package-meta-tools",
+        "laravel-package-metatools",
+        "hwa-metatools",
+        "hwa-tools",
+        "helper",
+        "helpers",
+        "package",
+        "laravel",
+        "laravel-helper",
+        "laravel-helpers",
+        "laravel-package",
+        "laravel-package-helpers",
+        "laravel-package-helper",
+        "hwa-vina-helpers",
+        "hwa-helper",
+        "hwa-helpers",
+        "hoangphi-helpers",
+        "hoangphidev-helpers",
+        "hoangphi-hwa-tools",
+        "hoangphidev-hwa-tools"
+    ],
+    "homepage": "https://github.com/hoangphidev/hwa-tools",
+    "authors": [
+        {
+            "name": "Phi Hoang",
+            "email": "hoangphi.dev@gmail.com",
+            "homepage": "https://github.com/hoangphidev/hwa-tools",
+            "role": "Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2|^8.0",
+        "illuminate/support": "^5.8|^6|^7|^8",
+        "ext-curl": "*",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "HoangPhi\\HwaTools\\": "src/"
+        },
+        "files": [
+            "src/Helpers/hwa_commons.php",
+            "src/Helpers/hwa_datetime.php",
+            "src/Helpers/hwa_images.php",
+            "src/Helpers/hwa_ipinfo.php",
+            "src/Helpers/hwa_response_api.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "HoangPhi\\HwaTools\\Providers\\HwaToolServiceProvider"
+            ]
+        }
+    },
+    "prefer-stable": true
+}

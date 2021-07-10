@@ -16,6 +16,23 @@ if (!function_exists('app_name')) {
 
 /*
 |--------------------------------------------------------------------------
+| Get app domain from app_url
+|--------------------------------------------------------------------------
+*/
+
+
+if (!function_exists('app_domain')) {
+
+    function app_domain()
+    {
+        $app_url = config('app.url');
+        $parse = parse_url($app_url);
+        return $parse['host'];
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
 | Status = Activate | Deactivate
 |--------------------------------------------------------------------------
 */
@@ -29,7 +46,7 @@ if (!function_exists('activate_status')) {
      */
     function activate_status()
     {
-        return config('hwa_helpers.status.activate');
+        return config('hwa_tools.status.activate');
     }
 }
 
@@ -42,7 +59,7 @@ if (!function_exists('deactivate_status')) {
      */
     function deactivate_status()
     {
-        return config('hwa_helpers.status.deactivate');
+        return config('hwa_tools.status.deactivate');
     }
 }
 
@@ -61,7 +78,7 @@ if (!function_exists('gender_male')) {
      */
     function gender_male()
     {
-        return config('hwa_helpers.gender.male');
+        return config('hwa_tools.gender.male');
     }
 }
 
@@ -74,7 +91,7 @@ if (!function_exists('gender_female')) {
      */
     function gender_female()
     {
-        return config('hwa_helpers.gender.female');
+        return config('hwa_tools.gender.female');
     }
 }
 
@@ -93,10 +110,15 @@ if (!function_exists('page_limit')) {
      */
     function page_limit()
     {
-        return config('hwa_helpers.page_limit') ?: intval(12);
+        return config('hwa_tools.page_limit') ?: intval(12);
     }
 }
 
+/*
+|--------------------------------------------------------------------------
+| Modify .env file
+|--------------------------------------------------------------------------
+*/
 
 if (!function_exists('setEnv')) {
 
@@ -147,6 +169,12 @@ if (!function_exists('setEnv')) {
     }
 }
 
+/*
+|--------------------------------------------------------------------------
+| Check array assoc
+|--------------------------------------------------------------------------
+*/
+
 if (!function_exists('is_array_assoc')) {
 
     /**
@@ -159,5 +187,26 @@ if (!function_exists('is_array_assoc')) {
     {
         if (array() === $arr) return false;
         return array_keys($arr) !== range(0, count($arr) - 1);
+    }
+}
+
+/*
+|--------------------------------------------------------------------------
+| Random string = 10 string
+|--------------------------------------------------------------------------
+*/
+
+if (!function_exists('generate_random_string')) {
+
+    function generate_random_string($length = 10) {
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyz';
+        $charactersLength = strlen($characters);
+        $randomString = '';
+
+        for ($i = 0; $i < $length; $i++) {
+            $randomString .= $characters[rand(0, $charactersLength - 1)];
+        }
+
+        return $randomString;
     }
 }

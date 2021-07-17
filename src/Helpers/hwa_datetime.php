@@ -84,3 +84,17 @@ if (!function_exists('custom_date')) {
         return Carbon::parse($date)->format($format);
     }
 }
+
+/*
+|--------------------------------------------------------------------------
+| Get list timezone name
+|--------------------------------------------------------------------------
+*/
+
+if (!function_exists('get_list_timezones')) {
+
+    function get_list_timezones()
+    {
+        return DateTimeZone::listIdentifiers(DateTimeZone::ALL);
+    }
+}

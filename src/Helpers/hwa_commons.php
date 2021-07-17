@@ -210,3 +210,28 @@ if (!function_exists('generate_random_string')) {
         return $randomString;
     }
 }
+
+/*
+|--------------------------------------------------------------------------
+| check_active_menu
+|--------------------------------------------------------------------------
+*/
+
+if (!function_exists('check_active_menu')) {
+
+    /**
+     * Check activate menu
+     *
+     * @param $menu
+     * @param $url
+     * @return bool
+     */
+    function check_active_menu($menu, $url)
+    {
+        if (!$menu || !$url) return false;
+        $arr_menu = explode('/', $menu);
+        $arr_url = explode('/', $url);
+        if (end($arr_url) != end($arr_menu)) return false;
+        return true;
+    }
+}

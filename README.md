@@ -77,6 +77,8 @@ gender_female(); // Get gender female - Ex: 1 - female
 
 page_limit(); // Get page limit default in pagination - Ex: 12
 
+check_active_menu($menu, $url); // Check active menu. $menu is router menu
+
 ```
 
 2. Datetime
@@ -95,6 +97,8 @@ current_date('H:i:s d/m/Y'); // Get current date with format - Ex: 00:00:01 01/0
 custom_date('2021-07-01 00:00:01', 'H:i:s d/m/Y'); // Get customer date with format - Ex: 00:00:01 01/07/2021
 
 custom_date('2021-07-01 00:00:01', 'H:i:s d/m/Y', 'en_EN'); // Get customer date with format and locale for diffForHumans - Ex: 00:00:01 01/07/2021 or 1 seconds or 1 minutes.
+
+get_list_timezones(); // Get list timezones - response array
 
 ```
 
@@ -123,11 +127,15 @@ get_client_ip(); // Get client ip from https://ipinfo.io
 
 code_to_country('EN'); // Convert country code to country name. Ex: EN to English
 
-get_os(); // get OS client using
+get_os(); // Get OS client using
 
-get_client_browser(); // get client browser using
+get_client_browser(); // Get client browser using
 
-get_device(); // get client device using
+get_device(); // Get client device using
+
+get_country_list(); // Get list country world
+
+get_list_currency(); // Get list currency
 
 ```
 

@@ -24,11 +24,11 @@ class MetaTools extends Model
     {
         $this->type = $type;
 
+        $this->allow_type = config('hwa_tools.allow_type');
+
         $this->metaFieldId = $this->allow_type[$this->type][0];
 
         $this->metaFieldObjectType = $this->allow_type[$this->type][1];
-
-        $this->allow_type = config('st_tools.allow_type');
 
         $this->table = $this->type . '_meta';
     }

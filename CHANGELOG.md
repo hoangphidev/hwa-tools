@@ -1,3 +1,9 @@
+## v1.0.4 - 2021-10-06
+
+### Fixed
+
+- Fix meta tools class.
+
 ## v1.0.3 - 2021-08-22
 
 ### Fixed

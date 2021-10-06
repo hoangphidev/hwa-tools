@@ -30,7 +30,7 @@ class MetaTools extends Model
 
         $this->metaFieldObjectType = $this->allow_type[$this->type][1];
 
-        $this->table = $this->type . '_meta';
+        $this->table = $this->type . '_metas';
     }
 
     /**

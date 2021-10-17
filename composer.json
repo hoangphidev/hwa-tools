@@ -72,5 +72,8 @@
             ]
         }
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+    "suggest": {
+        "hwavina/hwa-meta" : "^1.0"
+    }
 }
